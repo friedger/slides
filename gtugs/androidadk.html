@@ -22,26 +22,34 @@
   </head>
   
   <style>
-    /* Your individual styles here, or just use inline styles if that’s
-       what you want. */
-    biglogo {background:'https://sites.google.com/a/gtugs.org/bru/_/rsrc/1303818453280/home/customLogo.gif';}
-    article:not(.nobackground):not(.biglogo) {background:'https://sites.google.com/a/gtugs.org/bru/_/rsrc/1303818453280/home/customLogo.gif';}
+    
+
+	.slides.template-brugtug > article:not(.nobackground):not(.biglogo) {
+				background: url(images/colorbar.png) 0 600px repeat-x,
+				url(images/brugtug.gif) 640px 610px no-repeat;
+
+	background-size: 100%, 225px;  
+	background-color: white;  
+	}
+
+    .slides.template-brugtug > article.biglogo {
+		background: white url(images/brugtug.gif) 50% 50% no-repeat;
+		background-size: 600px;
+	}
     
   </style>
 
   <body style='display: none'>
 
-    <section class='slides layout-regular template-default'>
+    <section class='slides layout-regular template-brugtug'>
       
       <!-- Your slides (<article>s) go here. Delete or comment out the
            slides below. -->
         
         
       
-      <article class='biglogo'>
-      </article>
-
-      <article>
+      <article class='biglogo' style="background: white url(images/openaccessories.png) 100% 50% no-repeat;">	  
+	  
         <h1>
           Android ADK
           <br>
