@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Web Intents</title>
+
+    <meta charset='utf-8'>
+    <script
+      src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+  </head>
+  
+  <style>
+    
+
+	.slides.template-brugtug > article:not(.nobackground):not(.biglogo) {
+				background: url(images/colorbar.png) 0 600px repeat-x,
+				url(images/brugtug.gif) 640px 610px no-repeat;
+
+	background-size: 100%, 225px;  
+	background-color: white;  
+	}
+
+    .slides.template-brugtug > article.biglogo {
+		background: white url(images/brugtug.gif) 50% 50% no-repeat;
+		background-size: 600px;
+	}
+    
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-brugtug'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+        
+        
+      
+      <article class='biglogo' style="background: white url(images/web-intents-256px.png) 50px 50px no-repeat;">	  
+	  </article>
+	  
+	  <article>
+	  
+        <h1>
+          Web Intents
+          <br>
+          Bringing Web Apps Closer Together
+        </h1>
+        <p>
+          Friedger Müffke
+          <br>
+          May 10, 2012
+        </p>
+				
+      </article>
+      
+
+      <article >
+        <h3>
+		  User activities
+        </h3>
+		<p>What the user intents to do on the web ...</p>
+		<table border="0px" style="font-size:22px;">
+		<tr>
+		<td>
+        <ul>
+		<li>Share<br/><span style="font-size:17px;">Twitter, Email,..<span></li>
+		<li>Pick<br/><span style="font-size:17px;">Picasa, Flickr, Youtube, Webcam ..</span></li>
+        <li>Edit<br/><span style="font-size:17px;">image, document, ..</span></li>
+		<li>Save<br/><span style="font-size:17px;">Google Drive, locally, ..</span></li>
+        </ul>
+		</td>
+		<td>
+        <ul>
+		<li>Props<br/><span style="font-size:17px;">Like, praise, +1, ..</span></li>
+        <li>Print<br/><span style="font-size:17px;">Fax, pdf, ..</span></li>
+        <li>LogIn<br/><span style="font-size:17px;">OpenId</span></li>
+        <li>Subscribe<br/><span style="font-size:17px;">Notifications by e-mail, sms, ..</span></li>
+		<ul>
+		</td>
+		<td>
+		<ul>
+		<li>Search<br/><span style="font-size:17px;">Wikipedia, dictionary, ..</span></li>
+		<li>Checkin<br/><span style="font-size:17px;">and other Activity Stream verbs</span></li>
+		<li>Discover<br/><span style="font-size:17px;"> APIs and other services</span></li>
+        </ul>
+		</td>
+
+		</tr>
+		</table>
+
+		<p style="text-align:right;">
+		.. is provided by several services.
+		</p>
+      </article>	  
+
+	  <article>
+	  <h3>NASCAR problem</h3>
+	  <p style="text-align:center; margin-left:50px; margin-right:50px">
+		<img style="height: 200px" src="images/nascaropenid.jpg"/>
+		<img style="height: 200px" src="images/nascarbaby.png"/>
+	  </p>
+	  <p>
+	    Implementation of all available services is necessary by all web site provider.
+	  </p>
+	  </article>
+	  
+	  <article class="smaller">
+	  <h3>Desired Solution</h3>
+	  <q>
+	    Web Intents is designed to address the problem of a Site wanting to do
+a certain Action with a Partner known to the User but not the Site.
+
+	  </q>
+	  <div class='author'>
+          timeless
+        </div>
+		
+		<!--
+		<p>
+		<img style="height: 200px" src="images/shareintent0.png"/>
+	  </p>
+The User doesn't really want the Site to know which Partner the User
+has selected, nor does the User really want the Partner to know which
+Site caused the User to contact the Partner.
+-->
+	  </article>	  	
+	  
+      <article>
+        <h3>
+           Share intent
+        </h3>
+		<p>
+		  Single Button Solution		  
+        </p>
+        <p class="build" style="text-align:center; margin-left:50px; margin-right:50px">		
+		  <img style="height: 200px" src="images/shareintent0.png"/>
+		  <img style='height: 200px' src='images/shareintent.png'/>
+		</p>
+		
+		</div>
+        
+      </article>
+
+	  <article>
+	  <h3>Current Status</h3>
+	  <ul>
+		<li>Available in Chrome Canary (18+) since Feb'2012</li>
+		<li>First source code changes commited in WebKit 7th May 2012</li>
+		<li>W3C standard in Editors Draft Status</li>	
+		<li>more standards to come</li>
+	  </ul>
+	  
+	  </article>
+	  	 
+	  <article class='nobackground'>
+        <h3>
+          Specification of Pick Intent
+        </h3>        
+        <iframe src='https://dvcs.w3.org/hg/dap/raw-file/16185b62381d/gallery/index.html'></iframe>
+      </article>
+	 
+	  
+	  
+	  <article class='fill'>
+        <h3>
+          Demo
+        </h3>
+        <p>
+		<a href="http://demos.webintents.org/" target="_blank">
+          <img src='images/online_demo.png' style="height:400px"/>
+		</a>
+        </p>
+        <div class='source white'>
+          Source: wwww.fiswebservices.com
+        </div>
+      </article>
+
+	  <article>
+      <h3>Life cycle of Intents</h3>
+	  involves Service page, Client page, User Agent
+      <p>
+        <dfn id="dfn-registration">Registration:</dfn> Service page informs the User Agent
+      </p>
+      <p>
+        <dfn id="dfn-invocation">Invocation:</dfn> Client page dispatches an Intent
+      </p>
+      <p>
+        <dfn id="dfn-selection">Selection:</dfn> User Agent decides which Service will handle the Intent
+      </p>
+      <p>
+        <dfn id="dfn-delivery">Delivery:</dfn> Service receives Intent from User Agent
+      </p>
+      <p>
+        <dfn id="dfn-response">Response:</dfn> Service passes data back through the User Agent to the Client page.
+      </p>
+	  </article>
+	  
+	  <article>
+      <h3>Code for Client page</h3>
+	  <section>
+	  <pre>
+var startActivity = window.navigator.startActivity 
+					|| window.navigator.webkitStartActivity;
+var imageUrl = document.getElementById("main-image").src;
+navigator.startActivity(intent, myCallback);
+var intent = new Intent("http://webintents.org/share", 
+					"image/*", imageUrl);
+
+var onSuccess = function(data) { /* woot */ };
+var onError = function(data) { /* boooo */ };
+
+startActivity.call(intent, onSuccess, onError);	  
+	  </pre>
+	  </section>
+	  </article>
+
+	  <article>
+      <h3>Code for Server page</h3>
+	  <section>
+	  <pre>
+"intents":{
+  "http://webintents.org/share" : [{
+    "title" : "Best Image editing app",
+    "type" : ["image/*"],
+    "href" : "/index.html"
+  }]
+}</pre>
+	  </section>
+	  <section>
+	  <pre>
+document.addEventListener("load", function() {
+  if(!!window.intent) {
+    var data = window.intent.data;
+    // do something with the received Url
+    window.intent.postResult(data);     
+  }
+}, false);</pre>
+	  </section>
+	  </article>
+	  
+	  <article>
+		<h3>Ongoing work</h3>
+		<ul>
+			<li>More coding on Chrome and WebKit</li>
+			<li>More discussion about uses cases - Feedback wanted!</li>
+			<li>Technical refinement, e.g. constructor of Intent</li>			
+		</ul>	 
+		<p>&nbsp;</p>
+		<h3>Open Topics</h3>
+		<ul>
+			<li>Inline Services</li>
+			<li>Service discovery for Home networks</li>
+		<ul>	 
+	  </article>
+	  
+	  <article>
+		<h3>More Topics</h3>
+		<ul>
+			<li> Localization</li>
+			<li> Relation to <em>&lt;link rel=</em></li>			
+			<li> Native implementations	</li>
+			<ul>
+				<li> Relation to Android intents</li>
+				<li> Relation to Microsoft 8 Contracts</li>
+			</ul>
+			<li> Android Plugin for Web Intents in PhoneGap by Boris Smus</li>
+		</ul>
+	  </article>
+	  
+	  
+		<article id="who">
+		<h3>Friedger Müffke</h3>
+		<p>
+			<img class="avatar rounded" data-config-pic>
+		</p>
+		<p>
+			<a rel="author" data-config-gplus target="_blank"> <img
+				src="http://www.google.com/images/icons/ui/gprofile_button-44.png"
+				width="44" height="44"> </a> +<a rel="author" data-config-gplus
+				target="_blank"><span data-config-name>Friedger Müffke</span>
+			</a>
+		</p>
+		<br>
+		<p>
+			<a rel="author" data-config-twitter target="_blank"
+				style="margin-left: -8px;"> <img
+				src="images/twitter_newbird_blue.png" width="58" height="58">
+			</a> @ <a rel="author" data-config-twitter target="_blank"
+				style="margin-left: -8px;"><span data-config-twitter>fmdroid</span>
+			</a>
+		</p>
+		<br>
+		<p>
+			Slides: <a style="display: inline" data-config-slides>friedger.github.com/slides/gtugs</a>
+		</p>
+		<br />
+		<p style="font-size: 10px; letter-spacing: 0; line-height: 11px;">
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">This presentation</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://friedger.github.com/slides/gtugs" property="cc:attributionName" rel="cc:attributionURL">friedger</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+		 Presentation template is licensed under GPLv3 and was derived from other works indicated in the source code. Some content and media are copyrighted, and their sources are indicated.
+		</p>
+	</article>
+
+	<article>
+		<h3>
+		  Links
+		</h3>
+		<p>
+		  <a href="http://webintents.org">Home of Web Intents (as understood by Google)</a>
+		</p>
+		<p>          
+		  <a href="http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html">Specification</a>          
+		</p> 
+		<p>
+			<a href="https://plus.google.com/116171619992010691739/posts">+Web Intents</a>
+		</p>
+		<p> <a href="https://docs.google.com/document/d/13qLWZxuiAxdaXPk2X85XEmlhjCtMT_oKVsY39-pkhhU/edit">Web Intents in Chrome Apps</a>
+	</article>
+
+<!--
+
+      <article class='smaller'>
+        <h3>
+          Simple slide with header and text (small font)
+        </h3>
+        <p>
+          This is a slide with just text. This is a slide with just text.
+          This is a slide with just text. This is a slide with just text.
+          This is a slide with just text. This is a slide with just text.
+        </p>
+        <p>
+          There is more text just underneath with a <code>code sample: 5px</code>.
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          Slide with bullet points and a longer title, just because we
+          can make it longer
+        </h3>
+        <ul>
+          <li>
+            Use this template to create your presentation
+          </li>
+          <li>
+            Use the provided color palette, box and arrow graphics, and
+            chart styles
+          </li>
+          <li>
+            Instructions are provided to assist you in using this
+            presentation template effectively
+          </li>
+          <li>
+            At all times strive to maintain Google's corporate look and feel
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Slide with bullet points that builds
+        </h3>
+        <ul class="build">
+          <li>
+            This is an example of a list
+          </li>
+          <li>
+            The list items fade in
+          </li>
+          <li>
+            Last one!
+          </li>
+        </ul>
+
+        <div class="build">
+          <p>Any element with child nodes can build.</p>
+          <p>It doesn't have to be a list.</p>
+        </div>
+      </article>
+
+      <article class='smaller'>
+        <h3>
+          Slide with bullet points (small font)
+        </h3>
+        <ul>
+          <li>
+            Use this template to create your presentation
+          <li>
+            Use the provided color palette, box and arrow graphics, and
+            chart styles
+          <li>
+            Instructions are provided to assist you in using this
+            presentation template effectively
+          <li>
+            At all times strive to maintain Google's corporate look and feel
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Slide with a table
+        </h3>
+        
+        <table>
+          <tr>
+            <th>
+              Name
+            <th>
+              Occupation
+          <tr>
+            <td>
+              Luke Mahé
+            <td>
+              V.P. of Keepin’ It Real
+          <tr>
+            <td>
+              Marcin Wichary
+            <td>
+              The Michael Bay of Doodles
+        </table>
+      </article>
+      
+      <article class='smaller'>
+        <h3>
+          Slide with a table (smaller text)
+        </h3>
+        
+        <table>
+          <tr>
+            <th>
+              Name
+            <th>
+              Occupation
+          <tr>
+            <td>
+              Luke Mahé
+            <td>
+              V.P. of Keepin’ It Real
+          <tr>
+            <td>
+              Marcin Wichary
+            <td>
+              The Michael Bay of Doodles
+        </table>
+      </article>
+      
+      <article>
+        <h3>
+          Styles
+        </h3>
+        <ul>
+          <li>
+            <span class='red'>class="red"</span>
+          <li>
+            <span class='blue'>class="blue"</span>
+          <li>
+            <span class='green'>class="green"</span>
+          <li>
+            <span class='yellow'>class="yellow"</span>
+          <li>
+            <span class='black'>class="black"</span>
+          <li>
+            <span class='white'>class="white"</span>
+          <li>
+            <b>bold</b> and <i>italic</i>
+        </ul>
+      </article>
+      
+      <article>
+        <h2>
+          Segue slide
+        </h2>
+      </article>
+
+      <article>
+        <h3>
+          Slide with an image
+        </h3>
+        <p>
+          <img style='height: 500px' src='images/example-graph.png'>
+        </p>
+        <div class='source'>
+          Source: Sergey Brin
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          Slide with an image (centered)
+        </h3>
+        <p>
+          <img class='centered' style='height: 500px' src='images/example-graph.png'>
+        </p>
+        <div class='source'>
+          Source: Larry Page
+        </div>
+      </article>
+
+      <article class='fill'>
+        <h3>
+          Image filling the slide (with optional header)
+        </h3>
+        <p>
+          <img src='images/example-cat.jpg'>
+        </p>
+        <div class='source white'>
+          Source: Eric Schmidt
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          This slide has some code
+        </h3>
+        <section>
+        <pre>
+&lt;script type='text/javascript'&gt;
+  // Say hello world until the user starts questioning
+  // the meaningfulness of their existence.
+  function helloWorld(world) {
+    for (var i = 42; --i &gt;= 0;) {
+      alert('Hello ' + String(world));
+    }
+  }
+&lt;/script&gt;
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+  u { color: 'umber' }
+&lt;/style&gt;
+</pre>
+        </section>
+      </article>
+      
+      <article class='smaller'>
+        <h3>
+          This slide has some code (small font)
+        </h3>
+        <section>
+        <pre>
+&lt;script type='text/javascript'&gt;
+  // Say hello world until the user starts questioning
+  // the meaningfulness of their existence.
+  function helloWorld(world) {
+    for (var i = 42; --i &gt;= 0;) {
+      alert('Hello ' + String(world));
+    }
+  }
+&lt;/script&gt;
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+  u { color: 'umber' }
+&lt;/style&gt;
+</pre>
+        </section>
+      </article>
+      
+      <article>
+        <q>
+          The best way to predict the future is to invent it.
+        </q>
+        <div class='author'>
+          Alan Kay
+        </div>
+      </article>
+      
+      <article class='smaller'>
+        <q>
+          A distributed system is one in which the failure of a computer 
+          you didn’t even know existed can render your own computer unusable.
+        </q>
+        <div class='author'>
+          Leslie Lamport
+        </div>
+      </article>
+      
+      <article class='nobackground'>
+        <h3>
+          A slide with an embed + title
+        </h3>
+        
+        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+      </article>
+
+      <article class='nobackground'>
+        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+      </article>
+
+      <article class='fill'>
+        <h3>
+          Full-slide embed with (optional) slide title on top
+        </h3>
+        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+      </article>
+      
+      <article>
+        <h3>
+          Thank you!
+        </h3>
+        
+        <ul>
+          <li>
+            <a href='http://www.google.com'>google.com</a>
+        </ul>
+      </article>
+-->
+    </section>
+
+  </body>
+</html>
